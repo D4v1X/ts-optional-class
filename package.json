@@ -1,0 +1,43 @@
+{
+  "name": "ts-optional",
+  "version": "1.0.0",
+  "description": "Optional Type in TypeScript like Java Optional API",
+  "main": "index.js",
+  "scripts": {
+    "prepublish": "npm run build",
+    "build": "tsc",
+    "test": "karma start",
+    "lint": "tslint -c tslint.json 'src/**/*.ts' --type-check --format stylish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/D4v1X/ts-optional.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/D4v1X/ts-optional/issues"
+  },
+  "homepage": "https://github.com/D4v1X/ts-optional#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jasmine": "^2.8.6",
+    "@types/node": "^9.6.1",
+    "awesome-typescript-loader": "^4.0.1",
+    "jasmine": "^3.1.0",
+    "jasmine-core": "^3.1.0",
+    "jasmine-spec-reporter": "^4.2.1",
+    "karma": "^2.0.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-cli": "^1.0.1",
+    "karma-coverage-istanbul-reporter": "^1.4.2",
+    "karma-jasmine": "^1.1.1",
+    "karma-jasmine-html-reporter": "^1.0.0",
+    "karma-webpack": "^3.0.0",
+    "ts-node": "^5.0.1",
+    "tslint": "^5.9.1",
+    "typescript": "^2.8.1",
+    "webpack": "^4.4.1"
+  }
+}
