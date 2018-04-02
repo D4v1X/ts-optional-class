@@ -2,7 +2,7 @@
   "name": "ts-optional",
   "version": "1.0.0",
   "description": "Optional Type in TypeScript like Java Optional API",
-  "main": "index.js",
+  "main": "src/optional.ts",
   "scripts": {
     "prepublish": "npm run build",
     "build": "tsc",
@@ -13,8 +13,11 @@
     "type": "git",
     "url": "git+https://github.com/D4v1X/ts-optional.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "Typescript",
+    "Optional"
+  ],
+  "author": "D4v1X",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/D4v1X/ts-optional/issues"
