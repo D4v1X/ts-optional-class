@@ -11,13 +11,13 @@
  */
 export class Optional<T> {
 
-  private value: T | null = null;
+  private readonly value: T | null = null;
 
   /**
    * Returns an empty {@code Optional} instance.  No value is present for this
    * Optional.
    *
-   * @param <T> Type of the non-existent value
+   * Note: <T> Type of the non-existent value
    * @return an empty {@code Optional}
    */
   public static empty<T>(): Optional<T> {
@@ -27,7 +27,7 @@ export class Optional<T> {
   /**
    * Returns an {@code Optional} with the specified present non-null value.
    *
-   * @param <T> the class of the value
+   * Note:  <T> the class of the value
    * @param value the value to be present, which must be non-null
    * @return an {@code Optional} with the value present
    * @throws TypeError If the overhanded value is null or undefined, a TypeError will be thrown.
@@ -43,7 +43,7 @@ export class Optional<T> {
    * Returns an {@code Optional} describing the specified value, if non-null,
    * otherwise returns an empty {@code Optional}.
    *
-   * @param <T> the class of the value
+   * Note: <T> the class of the value
    * @param value the possibly-null value to describe
    * @return an {@code Optional} with a present value if the specified value
    * is non-null, otherwise an empty {@code Optional}
@@ -61,7 +61,7 @@ export class Optional<T> {
    * Returns an {@code Optional} describing the specified value, if non-null,
    * otherwise returns an empty {@code Optional}.
    *
-   * @param <T> the class of the value
+   * Note: <T> the class of the value
    * @param value the possibly-null and undefined value to describe
    * @return an {@code Optional} with a present value if the specified value
    * is non-null, otherwise an empty {@code Optional}
@@ -138,7 +138,7 @@ export class Optional<T> {
    * and if the result is non-null, return an {@code Optional} describing the
    * result.  Otherwise return an empty {@code Optional}.
    *
-   * @param <U> The type of the result of the mapping function
+   * Note: <U> The type of the result of the mapping function
    * @param mapper a mapping function to apply to the value, if present
    * @return an {@code Optional} describing the result of applying a mapping
    * function to the value of this {@code Optional}, if a value is present,
@@ -159,7 +159,7 @@ export class Optional<T> {
    * and if invoked, {@code flatMap} does not wrap it with an additional
    * {@code Optional}.
    *
-   * @param <U> The type parameter to the {@code Optional} returned by
+   * Note: <U> The type parameter to the {@code Optional} returned by
    * @param mapper a mapping function to apply to the value, if present the mapping function
    * @return the result of applying an {@code Optional}-bearing mapping
    * function to the value of this {@code Optional}, if a value is present,
@@ -203,7 +203,7 @@ export class Optional<T> {
    * Return the contained value, if present, otherwise throw an Error
    * to be created by the provided supplier.
    *
-   * @param <X> Type of the exception to be thrown
+   * Note: <X> Type of the exception to be thrown
    * @param errorSupplier The supplier which will return the exception to be thrown
    * @return the present value
    * @throws X if there is no value present

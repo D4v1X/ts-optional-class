@@ -1,5 +1,5 @@
 {
-  "name": "ts-optional",
+  "name": "ts-optional-class",
   "version": "1.0.0",
   "description": "Optional Type in TypeScript like Java Optional API",
   "main": "src/optional.ts",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/D4v1X/ts-optional.git"
+    "url": "git+https://github.com/D4v1X/ts-optional-class.git"
   },
   "keywords": [
     "Typescript",
@@ -20,9 +20,9 @@
   "author": "D4v1X",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/D4v1X/ts-optional/issues"
+    "url": "https://github.com/D4v1X/ts-optional-class/issues"
   },
-  "homepage": "https://github.com/D4v1X/ts-optional#readme",
+  "homepage": "https://github.com/D4v1X/ts-optional-class#readme",
   "dependencies": {},
   "devDependencies": {
     "@types/jasmine": "^2.8.6",
