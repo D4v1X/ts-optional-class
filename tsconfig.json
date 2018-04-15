@@ -22,14 +22,14 @@
     "typeRoots": [
       "node_modules/@types"
     ],
-    "lib": [
-      "es2016",
-      "dom"
-    ],
+    "lib": [ "dom", "es2016", "es6", "es5" ],
     "removeComments": true
   },
+  "include": [
+    "./src/**/*"
+  ],
   "exclude": [
     "node_modules",
-    "**/*.spec.ts"
+    "./test/**/*.spec.ts"
   ]
 }
