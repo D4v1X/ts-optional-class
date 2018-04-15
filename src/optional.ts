@@ -1,3 +1,4 @@
+/* tslint:disable:function-name no-reserved-keywords no-typeof-undefined */
 /**
  * A container object which may or may not contain a non-null value.
  * If a value is present, {@code isPresent()} will return {@code true} and
@@ -98,7 +99,7 @@ export class Optional<T> {
   /**
    * Return {@code true} if there is a value present, otherwise {@code false}.
    *
-   * @return {@code true} if there is a value present, otherwise {@code false}
+   * @return true if there is a value present, otherwise false
    */
   public isPresent(): boolean {
     return this.value !== null;
