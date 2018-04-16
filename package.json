@@ -1,6 +1,6 @@
 {
   "name": "ts-optional-class",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Optional Type in TypeScript like Java Optional API",
   "main": "src/optional.ts",
   "scripts": {
