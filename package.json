@@ -4,10 +4,26 @@
   "description": "Optional Type in TypeScript like Java Optional API",
   "main": "src/optional.ts",
   "scripts": {
-    "prepublish": "npm run build",
-    "build": "tsc",
+    "start": "npm run build",
+    "clean": "rimraf bin && rimraf coverage",
+    "lint": "tslint -c tslint.json 'src/**/*.ts' 'tests/**/*.ts' --format stylish",
+    "check": "npm run lint -s && dependency-check ./package.json",
+    "pretest": "tsc",
     "test": "mocha -r ts-node/register test/**/*.spec.ts",
-    "lint": "tslint -c tslint.json 'src/**/*.ts' --format stylish"
+    "posttest": "rimraf bin/tests",
+    "compile": "tsc",
+    "build": "npm run compile",
+    "postbuild": "npm run check -s && npm run test -s",
+    "coverage": "nyc --reporter=html --reporter=text npm run test",
+    "coveralls": "npm run coverage -s && coveralls < coverage/lcov.info",
+    "postcoveralls": "rimraf ./coverage",
+    "prepublish": "npm run build -s",
+    "deploy": "git pull --rebase origin master && git push origin master",
+    "patch": "npm version patch && npm publish",
+    "minor": "npm version minor && npm publish",
+    "major": "npm version major && npm publish",
+    "postpublish": "git push origin master --follow-tags",
+    "autocl": "auto-changelog"
   },
   "repository": {
     "type": "git",
@@ -23,18 +39,47 @@
     "url": "https://github.com/D4v1X/ts-optional-class/issues"
   },
   "homepage": "https://github.com/D4v1X/ts-optional-class#readme",
-  "dependencies": {},
+  "dependencies": {
+    "npm": "5.8.0"
+  },
   "devDependencies": {
     "@types/chai": "4.1.2",
     "@types/mocha": "5.0.0",
     "@types/node": "9.6.5",
+    "@types/rimraf": "2.0.2",
+    "auto-changelog": "1.4.6",
     "chai": "4.1.2",
+    "coveralls": "3.0.0",
+    "dependency-check": "3.1.0",
     "mocha": "5.1.0",
+    "mocha-lcov-reporter": "1.3.0",
+    "nyc": "11.6.0",
     "prettier": "1.12.0",
+    "rimraf": "2.6.2",
     "ts-node": "5.0.1",
     "tslint": "5.9.1",
     "tslint-eslint-rules": "5.1.0",
-    "tslint-microsoft-contrib": "^5.0.3",
+    "tslint-microsoft-contrib": "5.0.3",
     "typescript": "2.8.1"
+  },
+  "nyc": {
+    "extension": [
+      ".ts"
+    ],
+    "include": [
+      "src/**/*.ts"
+    ],
+    "exclude": [
+      "**/*.d.ts"
+    ],
+    "reporter": [
+      "lcov",
+      "text-summary"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "all": true,
+    "check-coverage": true
   }
 }
