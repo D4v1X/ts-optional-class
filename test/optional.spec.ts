@@ -147,6 +147,14 @@ describe('Optional', () => {
             expect(Optional.ofAnything<string>('string').get()).to.be.eq('string');
         });
     })
+
+    describe('.toString', () => {
+        it('should never throw an error', () => {
+            expect(Optional.ofAnything(null).toString()).to.eq('Empty');
+            expect(Optional.ofAnything(undefined).toString()).to.eq('Empty');
+            expect(Optional.ofAnything<string>('string').toString()).to.be.eq('string');
+        });
+    })
 });
 
 

@@ -221,7 +221,7 @@ export class Optional<T> {
      */
     public toString(): string {
         if (this.value === null)
-            return 'empty';
+            return 'Empty';
         else
             return this.value.toString();
 
