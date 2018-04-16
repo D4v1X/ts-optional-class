@@ -1,8 +1,11 @@
 {
   "name": "ts-optional-class",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Optional Type in TypeScript like Java Optional API",
   "main": "dist/optional.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "start": "npm run build",
     "clean": "rimraf coverage",
