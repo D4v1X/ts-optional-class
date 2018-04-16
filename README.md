@@ -13,3 +13,26 @@ Optional for Typescript inspired by the Java Optional.
 npm install --save ts-optional-class
 ```
 
+### Usage
+
+#### Example:
+
+```ts
+import {Optional} from 'ts-optional-class/dist/optional';
+
+const active: boolean = Optional
+  .of(user)
+  .map(user => user.active)
+  .orElse(false);
+```
+
+#### API
+
+You have four ways to create an optional:
+
+```ts
+Optional.empty();
+Optional.of(value); // throws error if value is null
+Optional.ofNullable(value);
+Optional.ofAnything(value); // throws error if value is undefined
+```
