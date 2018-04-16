@@ -1,0 +1,8 @@
+test/
+node_modules/
+coverage/
+.gitignore
+.travis.yml
+*.log
+README.md
+tsconfig.json
