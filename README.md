@@ -33,6 +33,28 @@ You have four ways to create an optional:
 ```ts
 Optional.empty();
 Optional.of(value); // throws error if value is null
-Optional.ofNullable(value);
-Optional.ofAnything(value); // throws error if value is undefined
+Optional.ofNullable(value); // throws error if value is undefined
+Optional.ofAnything(value); 
+```
+
+Operations
+
+```ts
+  empty(): Optional<T>;
+  
+  of(value: T): Optional<T>;
+  ofNullable(value: T | null): Optional<T>;
+  ofAnything(value: T | null | undefined): Optional<T>;
+  
+  get(): T;
+  isPresent(): boolean;
+  ifPresent(func: (value: T) => void): void;
+  filter(predicate: (value: T) => boolean): Optional<T>;
+  map<U>(mapper: (value: T) => U): Optional<U>;
+  flatMap<U>(mapper: (value: T) => Optional<U>): Optional<U>;
+  orElse(other: T): T;
+  orElseGet(supplier: () => T): T;
+  orElseThrow<X extends Error>(errorSupplier: () => X): T;
+
+  toString(): string;
 ```
